@@ -3,16 +3,16 @@ import Person from '../Person/Person';
 import './Cohort.css';
 
 const Cohort = ({ staff, students }) => {
-  const peopleCards = staff.map(instructor => {
+  const staffCards = staff.map(instructor => {
     return (
       <div>
         <Person 
-          photo={instrcutor.photo}
-          name={instrcutor.name}
-          quote={instrcutor.quote}
-          superlative={instrcutor.superlative}
-          id={instrcutor.id}
-          key={instrcutor.id}
+          photo={instructor.photo}
+          name={instructor.name}
+          quote={instructor.quote}
+          superlative={instructor.superlative}
+          id={instructor.id}
+          key={instructor.id}
         />
       </div>
     );
@@ -32,7 +32,15 @@ const Cohort = ({ staff, students }) => {
     );
   }); 
 
-  return peopleCards;
-}
+  return (
+    <div>
+      <h2>Staff</h2>
+      {staffCards}
+      <h2>Students</h2>
+      {studentCards}
+    </div>
+  );
+
+};
 
 export default Cohort;
