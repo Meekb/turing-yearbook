@@ -6,7 +6,6 @@ const Cohort = ({staff}) => {
   const peopleCards = staff.map(person => {
     return (
       <div>
-        <h1>Staff</h1>
         <Person 
           photo={person.photo}
           name={person.name}
@@ -17,7 +16,7 @@ const Cohort = ({staff}) => {
       </div>
     );
   }); 
-
+  return peopleCards;
 }
 
 export default Cohort;
