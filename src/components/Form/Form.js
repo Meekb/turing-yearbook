@@ -12,6 +12,7 @@ class Form extends Component {
   render() {
     return (
       <div className='form-area'>
+        <h2>Add A Student</h2>
         <label>
           <input type='text' />
         </label>
@@ -23,3 +24,5 @@ class Form extends Component {
   }
 
 }
+
+export default Form;
