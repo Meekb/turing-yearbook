@@ -19,6 +19,7 @@ class Form extends Component {
     event.preventDefault();
     const newStudent = {
       id: Date.now(),
+      photo: 'https://placekitten.com/200/300',
       ...this.state
     }
     this.props.addPerson(newStudent);
