@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   addPerson = (newPerson) => {
-    this.setState( { staff: [...this.state.staff], students: [...this.state.students]) // need logic newPerson is staff ? add to staff, else add to students....
+    this.setState( { staff: [...this.state.staff], students: [...this.state.students]) // need logic newPerson is staff ? add to staff : add to students....here or Form submitPerson method?
   }
 
   render() {
@@ -23,7 +23,7 @@ class App extends Component {
       <header className="App-header">
       <h1>Turing Yearbook</h1>
       </header>
-        <Form />
+        <Form addPerson={this.addPerson} />
         <Cohort staff={this.state.staff} students={this.state.students}/>
       </div>
     );
