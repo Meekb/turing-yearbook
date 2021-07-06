@@ -27,6 +27,7 @@ const Cohort = ({ staff, students }) => {
           quote={student.quote}
           superlative={student.superlative}
           id={student.id}
+          key={student.id}
         />
       </div>
     );
