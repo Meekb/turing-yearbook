@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Form.css';
 
 class Form extends Component {
-  constructor() {
+  constructor({addPerson}) {
     super();
     this.state = {
       name: '',
@@ -13,6 +13,20 @@ class Form extends Component {
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value })
+  }
+
+  submitNewPerson = event => {
+    event.preventDefault();
+    const newStudent = {
+      id: Date.now(),
+      ...this.state
+    }
+    this.props.addPerson(newStudent);
+    this.clearInputs();
+  }
+
+  clearInputs = () => {
+    this.setState( { name: '', quote: '', superlative: ''});
   }
 
   render() {
@@ -46,7 +60,7 @@ class Form extends Component {
           id='superlative'
           onChange={event => {this.handleChange(event)}} 
         />
-        <button aria-label='Submit' className='submit-btn'>Submit</button>
+        <button aria-label='Submit' className='submit-btn' onClick={event => this.submitNewPerson(event)}>Submit</button>
       </div>
     );
   }
