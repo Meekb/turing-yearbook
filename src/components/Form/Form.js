@@ -23,6 +23,7 @@ class Form extends Component {
           aria-label='Name Entry' 
           type='text' 
           placeholder='Name...'
+          name='name'
           value={this.state.name} 
           id='name' 
         />
@@ -30,6 +31,7 @@ class Form extends Component {
           aria-label='Quote Entry' 
           type='text' 
           placeholder='Quote...'
+          name='quote'
           value={this.state.quote} 
           id='quote' 
         />
@@ -37,6 +39,7 @@ class Form extends Component {
           aria-label='Superlative Entry' 
           type='text' 
           placeholder='Superlative...'
+          name='superlative'
           value={this.state.superlative} 
           id='superlative' 
         />
