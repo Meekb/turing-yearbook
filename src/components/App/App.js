@@ -13,8 +13,8 @@ class App extends Component {
     }
   }
 
-  addPerson = (newPerson) => {
-    this.setState( { staff: [...this.state.staff], students: [...this.state.students]) // need logic newPerson is staff ? add to staff : add to students....here or Form submitPerson method?
+  addPerson = (newStudent) => {
+    this.setState( { students: [...this.state.students, newStudent]});
   }
 
   render() {
