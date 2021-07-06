@@ -25,7 +25,8 @@ class Form extends Component {
           placeholder='Name...'
           name='name'
           value={this.state.name} 
-          id='name' 
+          id='name'
+          onChange={event => this.handleChange(event)} 
         />
         <input 
           aria-label='Quote Entry' 
@@ -33,7 +34,8 @@ class Form extends Component {
           placeholder='Quote...'
           name='quote'
           value={this.state.quote} 
-          id='quote' 
+          id='quote'
+          onChange={event => {this.handleChange(event)}} 
         />
         <input 
           aria-label='Superlative Entry' 
@@ -41,7 +43,8 @@ class Form extends Component {
           placeholder='Superlative...'
           name='superlative'
           value={this.state.superlative} 
-          id='superlative' 
+          id='superlative'
+          onChange={event => {this.handleChange(event)}} 
         />
         <button aria-label='Submit' className='submit-btn'>Submit</button>
       </div>
